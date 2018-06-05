@@ -20,7 +20,7 @@ pipeline {
           }
           steps {
             sh 'java -version'
-            sleep(time: 10, unit: 'SECONDS')
+            sleep(time: 1, unit: 'SECONDS')
           }
         }
         stage('Java 9') {
@@ -29,15 +29,15 @@ pipeline {
           }
           steps {
             sh 'java -version'
-            sleep(time: 20, unit: 'SECONDS')
+            sleep(time: 3, unit: 'SECONDS')
           }
         }
       }
     }
-	stage('Checkpoint') {
+	stage('Checkpoint1') {
          agent none
          steps {
-            checkpoint 'Checkpoint'
+            checkpoint 'Checkpoint1'
          }
      }
   }
