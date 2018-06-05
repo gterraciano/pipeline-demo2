@@ -34,6 +34,11 @@ pipeline {
           }
         }
     }
+	stage('Shared Lib') {
+         steps {
+             helloWorld("Jenkins")
+         }
+      }
 	stage('Checkpoint1') {
           agent {
             label 'jdk9'
